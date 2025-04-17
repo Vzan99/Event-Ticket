@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "./components/navbar";
+import { Varela } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { Lexend_Deca } from "next/font/google";
+import { Coustard } from "next/font/google";
+import { Fraunces } from "next/font/google";
+import { Varela_Round } from "next/font/google";
+import { Baloo_Bhaijaan_2, Lilita_One } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +18,54 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const varela = Varela({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-varela",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"], // add more if needed
+  variable: "--font-montserrat",
+});
+
+const lexend = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-lexend",
+});
+
+const coustard = Coustard({
+  subsets: ["latin"],
+  weight: ["400", "900"],
+  variable: "--font-coustard",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-fraunces",
+});
+
+const varelaRound = Varela_Round({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-varela-round",
+});
+
+const baloo = Baloo_Bhaijaan_2({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-baloo",
+});
+
+const lilita = Lilita_One({
+  subsets: ["latin"],
+  weight: "400", // Only one weight available for Lilita One
+  variable: "--font-lilita",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +81,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${varela.variable} ${lexend.variable} ${coustard.variable} ${fraunces.variable} ${varelaRound.variable}   ${baloo.variable}
+  ${lilita.variable} antialiased`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
