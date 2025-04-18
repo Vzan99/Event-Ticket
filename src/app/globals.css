@@ -99,7 +99,7 @@ body {
     @apply flex justify-center items-center;
     @apply px-[20px] h-[50px] rounded-4xl bg-white shadow-md;
     @apply transition-transform transform duration-200 ease-in-out;
-    @apply text-black text-base no-underline font-semibold;
+    @apply text-[#222432] text-base no-underline font-semibold;
     @apply cursor-pointer;
     font-family: "fraunces", sans-serif;
   }
@@ -118,6 +118,19 @@ body {
   }
 
   .buttonB:hover {
+    transform: scale(1.1);
+  }
+
+  .buttonC {
+    @apply flex justify-center items-center;
+    @apply px-[20px] h-[50px] w-[300px] rounded-4xl bg-[#6096B4] shadow-md;
+    @apply transition-transform transform duration-200 ease-in-out;
+    @apply text-white text-base no-underline font-semibold;
+    @apply cursor-pointer text-2xl;
+    font-family: "fraunces", sans-serif;
+  }
+
+  .buttonC:hover {
     transform: scale(1.1);
   }
 
@@ -199,11 +212,11 @@ body {
   }
 
   .social-links {
-    @apply mt-10 w-[30px] h-[30px];
+    @apply w-[30px] h-[30px];
   }
 }
 
-/* Hero sECTION*/
+/* Hero Section*/
 @layer components {
   .content {
     @apply flex flex-col h-screen bg-[#FAF0D7] gap-[20px];
@@ -224,6 +237,42 @@ body {
   }
 }
 
+/* Details Page */
+@layer components {
+  .page-details {
+    @apply flex bg-[#FBF9F1] justify-center items-center pt-[120px] pb-[50px];
+  }
+
+  .card-details {
+    @apply flex flex-col shadow-2xl rounded-4xl bg-white;
+    @apply w-[1100px];
+  }
+
+  .details-img {
+    @apply flex w-full h-[250px] rounded-t-4xl object-cover;
+  }
+
+  .details-wrapper {
+    @apply flex p-[50px] h-full gap-[20px];
+  }
+
+  .details-group {
+    @apply flex flex-col w-2/3 gap-[30px];
+  }
+
+  .details-dividerA {
+    @apply flex flex-col;
+  }
+
+  .details-dividerB {
+    @apply flex flex-col pb-[30px];
+  }
+
+  .details-text-group {
+    @apply flex flex-col gap-[10px] pb-[20px];
+  }
+}
+
 /* Footer */
 @layer components {
   .footer {
@@ -234,6 +283,7 @@ body {
   .footer-content {
     @apply flex w-full px-[100px];
   }
+
   .footer-group {
     @apply flex flex-col w-1/2;
   }
