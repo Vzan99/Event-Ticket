@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="footer-group">
             <img
               className="big-logo"
-              src="logoquick-ticket.png"
+              src="logo-quick-ticket.png"
               alt="logo-quick-ticket-img"
             ></img>
             <h3 className="title">Ticketing made simple. Events made epic.</h3>
