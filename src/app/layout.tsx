@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/navbar";
+import Footer from "./components/footer";
 import { Varela } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import { Lexend_Deca } from "next/font/google";
@@ -81,11 +82,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${varela.variable} ${lexend.variable} ${coustard.variable} ${fraunces.variable} ${varelaRound.variable}   ${baloo.variable}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${varela.variable} ${lexend.variable} ${coustard.variable} ${fraunces.variable} ${varelaRound.variable} ${baloo.variable}
   ${lilita.variable} antialiased`}
       >
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
