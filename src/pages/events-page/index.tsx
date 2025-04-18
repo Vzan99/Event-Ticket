@@ -12,7 +12,7 @@ export default function Events() {
           ></img>
           <div className="details-wrapper">
             <div className="details-group">
-              <div className="details-dividerA  border-b-2 border-black">
+              <div className="details-dividerA  border-b-2 border-[#222432]">
                 <div className="details-text-group">
                   <h3 className="title">Coachella</h3>
                   <p className="card-text">
@@ -38,9 +38,11 @@ export default function Events() {
               </div>
             </div>
             <div className="details-dividerB">
-              <button className="buttonC">Buy Now</button>
-              <p className="card-text mt-[20px] mb-[10px]">Share this event</p>
-              <SocialMedia />
+              <div className="details-buy-group">
+                <button className="buttonC">Buy Now</button>
+                <p className="card-text">Share this event</p>
+                <SocialMedia />
+              </div>
             </div>
           </div>
         </div>
